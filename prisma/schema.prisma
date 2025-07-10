@@ -27,7 +27,12 @@ model User {
 
 model Business {
   id        Int     @id @default(autoincrement())
-  name      String
+  companyName      String
+  fullName  String
+  phone     String
+  address   String
+  websiteUrl String
+  companyEmail String
   logo      String? // URL or file path to the logo
   userId    Int
   user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
